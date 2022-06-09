@@ -8,5 +8,6 @@ from facedec_module import Facedec
 
 ## วิธีใช้งานโมดูล
 ```
-from facedec_module import Facedec
+face_dec = Face_dec()
 ```
+### Configuration face detection module
