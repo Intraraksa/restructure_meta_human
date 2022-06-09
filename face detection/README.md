@@ -11,3 +11,4 @@ from facedec_module import Facedec
 face_dec = Face_dec()
 ```
 ### Configuration face detection module
+1. weight_model = 
