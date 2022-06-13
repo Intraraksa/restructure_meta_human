@@ -4,4 +4,4 @@ The restructure to build the module file. The potential to adapt in the future p
 
 1. face recognition module
 2. read smartcard module
-3. (text2mouth module)[https://github.com/Intraraksa/restructure_meta_human/tree/master/text2mouth]
+3. <text2mouth module>[https://github.com/Intraraksa/restructure_meta_human/tree/master/text2mouth]
