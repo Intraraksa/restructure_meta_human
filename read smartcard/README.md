@@ -1,4 +1,5 @@
 # Read Smartcard Module
+Smart Card Module สำหรับใช้ในโปรเจค Metal Human
 
 ## การอ่าน Smartcard ด้วยภาษา Python
 ปกติจะเขียนคำสั่งโดยอ้างอิงจากตาราง APDU 
