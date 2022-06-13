@@ -10,5 +10,9 @@ from facedec_module import Facedec
 ```
 face_dec = Face_dec()
 ```
-### Configuration face detection module
-1. weight_model = 
+### Default configuration face detection module
+1. weight_model = 'model_15frame_adddata.h5'
+2. pickle_file = "src/rpy_tee.pickle"
+3. mtcnn = True
+4. rotate_angle=450
+5. dlib_file="src/weight/shape_predictor_68_face_landmarks.dat"
