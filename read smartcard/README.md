@@ -13,7 +13,7 @@ from smartcard_module import SmartCard
 
 reader = SmartCard()
 
-reader.read_smartcard()
+reader.scan_card()
 ```````````````
 
 ## ตาราง APDU
