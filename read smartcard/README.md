@@ -7,9 +7,13 @@
 ในส่วนของข้อมูลที่ต้องการจะดึงในโปรเจคนี้คือเลขที่บัตรประชาชน
 CID = [0x80, 0xb0, 0x00, 0x04, 0x02, 0x00, 0x0d]
 
-## การใช้งาน Smart Card Module
+## การใช้งาน Smart Card Module ( จำเป็นต้องเสียบ Smartcard reader )
 ```````````````
 from smartcard_module import SmartCard
+
+reader = SmartCard()
+
+reader.read_smartcard()
 ```````````````
 
 ## ตาราง APDU
