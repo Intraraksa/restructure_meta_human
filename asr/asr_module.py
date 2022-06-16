@@ -18,8 +18,8 @@ res = dict((v,k) for k,v in d.items())
 res[69]="[PAD]"
 res[68]="[UNK]"
 
-class asr_module():
-    def __init__(self,audio_maxlen,new_rate):
+class ASR():
+    def __init__(self,audio_maxlen=100000,new_rate=16000):
         self.audio_maxlen = audio_maxlen
         self.new_rate = new_rate
 
@@ -47,15 +47,20 @@ class asr_module():
         nums = None
         return ''.join(a)
 
-    def asr(self,path,freq):
+    def asr(self,path,freq=44100):
         """
         Code from https://github.com/vasudevgupta7/gsoc-wav2vec2/blob/main/notebooks/wav2vec2_onnx.ipynb
         Fork TF to numpy
         """
-        # sampling_rate, data = wavfile.read(path)
-        samples = round(len(path) * float(self.new_rate) / freq)
-        # new_data = sps.resample(np.squeeze(recording,1), samples)
-        new_data = sps.resample(np.squeeze(path,1), samples)
+        if path.split(".")[1] == "wav":
+            sampling_rate, data = wavfile.read(path)
+            samples = round(len(data) * float(self.new_rate) / freq)
+            new_data = sps.resample(data, samples)
+        else:    
+            # sampling_rate, data = wavfile.read(path)
+            samples = round(len(path) * float(self.new_rate) / freq)
+            # new_data = sps.resample(np.squeeze(recording,1), samples)
+            new_data = sps.resample(np.squeeze(path,1), samples)
         samples = None
         speech = np.array(new_data, dtype=np.float32)
         new_data = None
