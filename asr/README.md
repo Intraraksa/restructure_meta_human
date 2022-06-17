@@ -4,3 +4,16 @@ ASR Module ใช้สำหรับแปลงสัญญาณเสีย
 
 ## Model conversion
 การแปลง Model ASR จาก Huggingface model ทางผู้จัดทำได้ [Colab](https://github.com/Intraraksa/restructure_meta_human/blob/master/asr/project_asr2onnx.ipynb) สำหรับแปลง Model เป็น ONNX เอาไว้รวมถึงวิธีการ Inference ONNX model เอาไว้ และการ inference ได้ถูกทำเป็น Module class object เอาไว้เพื่อให้ใช้งานได้โดยง่าย
+
+## การเรียกใช้งาน Module
+1. อิมพอร์ตโมดูล
+``````
+from asr_module import ASR
+``````
+2. เรียกใช้งานโมดูลคลาส Object
+``````
+asr = ASR()
+``````
+3. ป้อนไฟล์เสียงที่ต้องการจะ Inference 
+** สามารถป้อนอินพุตเป็นไฟล์ .wav กับเสียงที่บันทึกผ่านไมล์ได้โดยตรง
+โดยที่ในการทกลองบันทึกเสียงผ่านไมล์ใช้ Library sounddevice และบันทึกเป็น 1 channel
